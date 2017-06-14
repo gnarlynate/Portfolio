@@ -14,7 +14,9 @@
  *= require_self
  */
 @import 'semantic-ui';
-
-.ui.cards {
+.ui.container.projects {
   padding-top: 50px;
+}
+.ui.cards {
+  padding-top: 10px;
 }
