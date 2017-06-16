@@ -14,7 +14,16 @@
  *= require_self
  */
 @import 'semantic-ui';
-.ui.container.projects {
+
+.medium.circular.image{
+  margin: auto;
+  width: 35%;
+  padding: 10px;
+}
+.ui.text{
+  padding: 20px;
+}
+.ui.container.projects, .container.index {
   padding-top: 50px;
 }
 .ui.cards {
