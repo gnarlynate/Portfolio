@@ -6,135 +6,73 @@
   </head>
   <body>
     <div class="ui container projects">
-
     <h4 class="ui horizontal divider header">
-<i class="diamond icon"></i>
-  Ruby
-</h4>
+      <i class="diamond icon"></i>
+        Ruby
+    </h4>
   <div class="center projects">
     <div class="ui cards">
-      <div class="card">
-        <div class="image">
-          <img src="https://cdn.shopify.com/s/files/1/0276/5929/files/matchdev-image.jpg?1244904174104237966">
-        </div>
-        <div class="content">
-          <div class="header">
-            MatchDev
+      <% @projects.each do |project| %>
+        <% if project.language == 'ruby' %>
+          <div class="card">
+            <div class="image">
+              <img src="<%= project.img %>">
+            </div>
+            <div class="content">
+              <div class="header">
+                <%= project.title %>
+              </div>
+              <div class="meta">
+                <%= project.meta %>
+              </div>
+              <div class="description">
+                <%= project.description %>
+              </div>
+            </div>
+            <div class="extra content">
+              <div class="ui two buttons">
+                  <% if project.url? %>
+                <a class="ui basic green button" href='<%= project.url %>' target='_blank'>View live demo</a>
+                  <% end %>
+                <a class="ui basic blue button" href='<%= project.github_url %>' target='_blank'>View it on Github</a>
+              </div>
+            </div>
           </div>
-          <div class="meta">
-            RoR app
-          </div>
-          <div class="description">
-            Rails application that uses bootstrap as a front-end framework, and
-            interacts with Stripes API for charging customers for paid content. Also
-            built databases and ran migrations.
-          </div>
-        </div>
-        <div class="extra content">
-          <div class="ui two buttons">
-            <a class="ui basic green button" href='https://matchdev.herokuapp.com' target='_blank'>View live demo</a>
-            <a class="ui basic blue button" href='https://github.com/NBowes/saasapp' target='_blank'>View it on Github</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src="https://cdn.shopify.com/s/files/1/0276/5929/files/api-test-image.jpg?1244904174104237966">
-        </div>
-      <div class="content">
-        <div class="header">
-          Shopify-App
-        </div>
-        <div class="meta">
-          Public app using shopify-app gem
-        </div>
-        <div class="description">
-        Public Rails application that uses the shopify-app gem. Controller
-        file has been modified to pull in orders, and include
-        fulfillment and payment status. Front-end framework done with semantic-ui.
-        </div>
-      </div>
-      <div class="extra content">
-        <div class="ui two buttons">
-          <a class="ui basic green button" href='https://nbowesapi.herokuapp.com/' target='_blank'>View live demo</a>
-          <a class="ui basic blue button" href='https://github.com/NBowes/api_test' target='_blank'>View it on Github</a>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="image">
-        <img src="https://cdn.shopify.com/s/files/1/0276/5929/files/command-line-image.jpg?1244904174104237966">
-      </div>
-      <div class="content">
-        <div class="header">
-          Shopify API
-        </div>
-        <div class="meta">
-          Sinatra app using the shopify_api gem
-        </div>
-        <div class="description">
-          Private Shopify app made in ruby using Sinatra. Wrote some test methods,
-          and prompts in console for creating products and orders.
-        </div>
-      </div>
-      <div class="extra content">
-        <div class="ui two buttons">
-          <a class="ui basic blue button" href='https://github.com/NBowes/shopify-api-gem/tree/master/sinatra-app' target='_blank'>View it on Github</a>
-        </div>
-      </div>
-    </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
       <h4 class="ui horizontal divider header">
         <i class="file code outline icon"></i>
           Javascript/jQuery
       </h4>
-<div class="center projects">
-  <div class='ui cards'>
-      <div class="card">
-        <div class="image">
-          <img src="https://cdn.shopify.com/s/files/1/0276/5929/files/jQuery-badges-image.jpg?1244904174104237966">
-        </div>
-        <div class="content">
-          <div class="header">
-            jQuery Badges
+  <div class="center projects">
+    <div class='ui cards'>
+      <% @projects.each do |project| %>
+        <% if project.language == 'javascript' %>
+          <div class="card">
+            <div class="image">
+              <img src="<%= project.img %>">
+            </div>
+            <div class="content">
+              <div class="header">
+                <%= project.title %>
+              </div>
+              <div class="meta">
+                <%= project.meta %>
+              </div>
+              <div class="description">
+                <%= project.description %>
+              </div>
+            </div>
+            <div class="extra content">
+              <div class="ui two buttons">
+                <a class="ui basic blue button" href='<%= project.github_url %>' target='_blank'>View it on Github</a>
+              </div>
+            </div>
           </div>
-          <div class="meta">
-            Javascript app using jQeury and AJAX
-          </div>
-          <div class="description">
-            This app makes an API call to my profile on Codeschool and pulls in
-            all of my course badges that I have completed.
-          </div>
-        </div>
-        <div class="extra content">
-          <div class="ui two buttons">
-            <a class="ui basic blue button" href='https://github.com/NBowes/jQueryBadgesProject' target='_blank'>View it on Github</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src="https://cdn.shopify.com/s/files/1/0276/5929/files/chat-app-image.jpg?8178334821942282265">
-        </div>
-        <div class="content">
-          <div class="header">
-            Chat app
-          </div>
-          <div class="meta">
-            Javascript app using Socket.io and Node.js
-          </div>
-          <div class="description">
-            This app uses jQuery to get the initials and message, and Socket.io to
-            post the messages to the screen. It also uses Express as the server.
-          </div>
-        </div>
-        <div class="extra content">
-          <div class="ui two buttons">
-            <a class="ui basic blue button" href='https://github.com/NBowes/chat-app' target='_blank'>View it on Github</a>
-          </div>
-        </div>
-      </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
