@@ -8,6 +8,7 @@
 
 project_list = [
   [
+    'https://cdn.shopify.com/s/files/1/0276/5929/files/matchdev-image.jpg?1244904174104237966',
     'MatchDev',
     'RoR app',
     'Rails application that uses bootstrap as a front-end framework, and interacts with Stripes API for charging customers for paid content. Also built databases and ran migrations.',
@@ -16,6 +17,7 @@ project_list = [
     'ruby'
   ],
   [
+    'https://cdn.shopify.com/s/files/1/0276/5929/files/api-test-image.jpg?1244904174104237966',
     'Shopify-App',
     'Public app using shopify-app gem',
     'Public Rails application that uses the shopify-app gem. Controller file has been modified to pull in orders, and include fulfillment and payment status. Front-end framework done with semantic-ui.',
@@ -24,6 +26,16 @@ project_list = [
     'ruby'
   ],
   [
+    'https://cdn.shopify.com/s/files/1/0276/5929/files/command-line-image.jpg?1244904174104237966',
+    'Shopify API',
+    'Sinatra app using the shopify_api gem',
+    'Private Shopify app made in ruby using Sinatra. Wrote some test methods, and prompts in console for creating products and orders.',
+     nil,
+    'https://github.com/NBowes/shopify-api-gem/tree/master/sinatra-app',
+    'ruby'
+  ],
+  [
+    'https://cdn.shopify.com/s/files/1/0276/5929/files/oauth-products.jpg?3925599334668962892',
     'Oauth Products',
     'Public app using shopify-api gem',
     'Shopify app that uses the shopify_api gem and Oauth to test some Product endpoints. Also uses ngrok to tunnel to localhost.',
@@ -32,6 +44,7 @@ project_list = [
     'ruby'
   ],
   [
+    'https://cdn.shopify.com/s/files/1/0276/5929/files/payment-gateway.jpg?7052504241380352469',
     'Payment Gateway',
     'Sinatra and HPSDK',
     'Payment Gateway that simulates a successful payment on Shopify checkout and uses the Hosted Payments SDK.',
@@ -40,6 +53,7 @@ project_list = [
     'ruby'
   ],
   [
+    'https://cdn.shopify.com/s/files/1/0276/5929/files/jQuery-badges-image.jpg?1244904174104237966',
     'jQuery Badges',
     'Javascript app using jQeury and AJAX',
     'This app makes an API call to my profile on Codeschool and pulls in all of my course badges that I have completed.',
@@ -48,6 +62,7 @@ project_list = [
     'javascript'
   ],
   [
+    'https://cdn.shopify.com/s/files/1/0276/5929/files/chat-app-image.jpg?8178334821942282265',
     'Chat app',
     'Javascript app using Socket.io and Node.js',
     'This app uses jQuery to get the initials and message, and Socket.io to post the messages to the screen. It also uses Express as the server.',
@@ -57,8 +72,9 @@ project_list = [
   ]
 ]
 
-project_list.each do |title, meta, description, url, github_url, language|
+project_list.each do |img, title, meta, description, url, github_url, language|
   Project.create(
+    img: img,
     title: title,
     meta: meta,
     description: description,
