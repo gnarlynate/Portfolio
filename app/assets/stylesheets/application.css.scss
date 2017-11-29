@@ -28,7 +28,12 @@
 
 .large.circular.image{
   margin: auto;
-  width: 40%;
+  width: 100%;
+}
+div.six.wide.column {
+  margin-top: 80px;
+  justify-content: center;
+  flex-direction: column;
 }
 .ui.text{
   padding: 20px;
@@ -38,4 +43,7 @@
 }
 .ui.cards {
   padding-top: 10px;
+}
+.ui.horizontal.divider.header{
+  padding-top: 20px;
 }
